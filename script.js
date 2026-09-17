@@ -1,15 +1,12 @@
-document.getElementById("lockScreen").classList.add("hidden");
-document.getElementById("site").classList.remove("hidden");
-const countdown = document.getElementById("countdown");
+const UNLOCK_DATE = new Date("2026-09-22T17:05:00");
+
 const lockScreen = document.getElementById("lockScreen");
 const site = document.getElementById("site");
+const countdown = document.getElementById("countdown");
 
-// September 22, 2026 at 5:05 PM
-const unlockDate = new Date(2020, 0, 0, 0, 0, 0);
-
-function updateCountdown() {
+function updateLock() {
   const now = new Date();
-  const difference = unlockDate.getTime() - now.getTime();
+  const difference = UNLOCK_DATE - now;
 
   if (difference <= 0) {
     lockScreen.classList.add("hidden");
@@ -18,19 +15,13 @@ function updateCountdown() {
     return;
   }
 
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor(
-    (difference % (1000 * 60 * 60)) / (1000 * 60)
-  );
-  const seconds = Math.floor(
-    (difference % (1000 * 60)) / 1000
-  );
+  const days = Math.floor(difference / 86400000);
+  const hours = Math.floor((difference % 86400000) / 3600000);
+  const minutes = Math.floor((difference % 3600000) / 60000);
+  const seconds = Math.floor((difference % 60000) / 1000);
 
   countdown.textContent =
-    `${days}d · ${String(hours).padStart(2, "0")}h · ${String(minutes).padStart(2, "0")}m · ${String(seconds).padStart(2, "0")}s`;
+    `${days}d · ${String(hours).padStart(2,"0")}h · ${String(minutes).padStart(2,"0")}m · ${String(seconds).padStart(2,"0")}s`;
 }
 
 function startReveals() {
@@ -42,41 +33,30 @@ function startReveals() {
     });
   }, { threshold: 0.12 });
 
-  document.querySelectorAll(".reveal").forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 }
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+updateLock();
+setInterval(updateLock, 1000);
 
 
 // START BUTTON
-const startButton = document.getElementById("startButton");
-
-if (startButton) {
-  startButton.addEventListener("click", () => {
-    document.getElementById("years").scrollIntoView({
-      behavior: "smooth"
-    });
+document.getElementById("startButton").addEventListener("click", () => {
+  document.getElementById("years").scrollIntoView({
+    behavior: "smooth"
   });
-}
+});
 
 
 // SECRET BUTTON
-const secretButton = document.getElementById("secretButton");
-
-if (secretButton) {
-  secretButton.addEventListener("click", () => {
-    const secret = document.getElementById("secret");
-
-    secret.classList.remove("hidden-secret");
-    secret.classList.add("visible");
-    secret.scrollIntoView({
-      behavior: "smooth"
-    });
+document.getElementById("secretButton").addEventListener("click", () => {
+  const secret = document.getElementById("secret");
+  secret.classList.remove("hidden-secret");
+  secret.classList.add("visible");
+  secret.scrollIntoView({
+    behavior: "smooth"
   });
-}
+});
 
 
 // MUSIC
@@ -85,9 +65,8 @@ const musicButton = document.getElementById("musicButton");
 
 if (musicButton && song) {
   musicButton.addEventListener("click", () => {
-
     if (!song.querySelector("source")) {
-      alert("Add your music file in the audio section of index.html first.");
+      alert("Add your permitted music file/link in the <audio> section of index.html first.");
       return;
     }
 
@@ -98,6 +77,5 @@ if (musicButton && song) {
       song.pause();
       musicButton.textContent = "♫ Play our song";
     }
-
   });
 }
