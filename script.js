@@ -1,3 +1,5 @@
+document.getElementById("lockScreen").classList.add("hidden");
+document.getElementById("site").classList.remove("hidden");
 const countdown = document.getElementById("countdown");
 const lockScreen = document.getElementById("lockScreen");
 const site = document.getElementById("site");
