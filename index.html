@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18 Summers</title>
+  <meta name="description" content="18 Summers — a story of growing up, growing together, and finding God along the way.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="lockScreen" class="lock-screen">
+    <div class="stars"></div>
+    <div class="lock-content">
+      <div class="small-mark">✦</div>
+      <h1>18 Summers</h1>
+      <p class="lock-subtitle">A story that's waiting for the end of summer.</p>
+      <div class="date">September 22, 2026 · 5:05 PM</div>
+      <div id="countdown" class="countdown">Loading...</div>
+      <p class="lock-note">Come back when summer ends. ❤️</p>
+    </div>
+  </div>
+
+  <main id="site" class="site hidden">
+    <section class="hero">
+      <div class="hero-stars"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">For Mom</p>
+        <h1>18 Summers</h1>
+        <p class="hero-subtitle">18 years of memories.<br>13 years of getting to call you Mom.<br>And a story I will always thank God for.</p>
+        <button class="start-button" id="startButton">Start the story <span>↓</span></button>
+        <button class="music-button" id="musicButton">♫ Play our song</button>
+        <audio id="song" preload="none">
+          <!-- Add your legally obtained/local audio here if you have permission:
+               <source src="music/18-summers.mp3" type="audio/mpeg">
+          -->
+        </audio>
+        <p class="music-note">Add your own music link/audio in the code if you'd like.</p>
+      </div>
+    </section>
+
+    <section class="intro reveal">
+      <p class="eyebrow">Before the memories</p>
+      <h2>Somehow, 18 years went by.</h2>
+      <p>
+        This is a little piece of our story. The big memories, the little memories,
+        the funny ones, the hard ones, the years that flew by, and the years that
+        helped make us who we are.
+      </p>
+      <p>
+        Most of all, it's a thank-you to the woman who came into my life when I was
+        six and somehow became my mom.
+      </p>
+    </section>
+
+    <section class="years" id="years">
+      <!-- Replace the placeholder text and image filenames below with your final memories/photos. -->
+
+      <article class="year-section sky reveal" id="year-1">
+        <div class="year-number">01</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-1.jpg" alt="A photo from year one" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">One</p><h2>We didn't sleep at all.</h2><p>One little beginning. One little life. And so much more ahead.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section sky reveal" id="year-2">
+        <div class="year-number">02</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-2.jpg" alt="A photo from year two" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Two</p><h2>My footsteps down the hall.</h2><p>A little snapshot from the years before I could remember them myself.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section sky reveal" id="year-3">
+        <div class="year-number">03</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-3.jpg" alt="A photo from year three" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Three</p><h2>I'm jumping into Dad's arms.</h2><p>Another little piece of the story that became ours.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section sky reveal" id="year-4">
+        <div class="year-number">04</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-4.jpg" alt="A photo from year four" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Four</p><h2>Princess dressing up.</h2><p>Little-me had no idea how many memories were being made.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section sky reveal" id="year-5">
+        <div class="year-number">05</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-5.jpg" alt="A photo from year five" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Five</p><h2>Tea in plastic cups.</h2><p>Some of the sweetest memories are the little ones.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section sky reveal" id="year-6">
+        <div class="year-number">06</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-6.jpg" alt="A photo from kindergarten" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Six · 2014</p><h2>I was off to school.</h2><p>Kindergarten. A backpack, a new chapter, and you becoming part of my everyday life.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section earth reveal" id="year-7">
+        <div class="year-number">07</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-7.jpg" alt="A photo from year seven" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Seven · 2015</p><h2>Kenzie's first day of school.</h2><p>A new school-day memory for the family scrapbook.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section earth reveal" id="year-8">
+        <div class="year-number">08</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-8.jpg" alt="A photo from year eight" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Eight · 2016</p><h2>Goofy faces & the first time I called you Mom.</h2><p>Somewhere in all the silliness, you became Mom.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section earth reveal" id="year-9">
+        <div class="year-number">09</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-9.jpg" alt="A photo from summer park trips" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Nine · 2017</p><h2>Summer park trips.</h2><p>Sunny days, little adventures, and memories I still get to carry with me.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section earth reveal" id="year-10">
+        <div class="year-number">10</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-10.jpg" alt="A photo from year ten" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Ten · 2018</p><h2>Our family was complete with little Boo girl.</h2><p>Another piece of our family, another chapter of home.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section earth reveal" id="year-11">
+        <div class="year-number">11</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-11.jpg" alt="A photo from year eleven" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Eleven · 2019</p><h2>So many adventures.</h2><p>Including the house that was made into our home.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section earth reveal" id="year-12">
+        <div class="year-number">12</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-12.jpg" alt="A photo from year twelve" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Twelve · 2020</p><h2>COVIDDDD AHHHHH.</h2><p>😂 Somehow we survived that chapter too.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section fall reveal" id="year-13">
+        <div class="year-number">13</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-13.jpg" alt="A photo from year thirteen" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Thirteen · 2021 ✝</p><h2>“Jesus, I believe.”</h2><p>A year that became part of both our stories in a whole new way. We came to God, and I'm forever thankful that I got to grow in faith with you.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section fall reveal" id="year-14">
+        <div class="year-number">14</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-14.jpg" alt="A photo from year fourteen" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Fourteen · 2022</p><h2>Middle school... we don't talk about it.</h2><p>😂 That's all we're putting here.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section fall reveal" id="year-15">
+        <div class="year-number">15</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-15.jpg" alt="A photo from year fifteen" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Fifteen · 2023</p><h2>High school.</h2><p>Growing up started feeling a little more real.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section fall reveal" id="year-16">
+        <div class="year-number">16</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-16.jpg" alt="A photo from year sixteen" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Sixteen · 2024</p><h2>You taught me to drive.</h2><p>One more step toward growing up—and one more thing I got to learn from you.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section fall reveal" id="year-17">
+        <div class="year-number">17</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-17.jpg" alt="A camping trip photo" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy"><p class="year-label">Seventeen · 2025</p><h2>Camping tripssss.</h2><p>Adventures, laughs, and memories that I hope we keep making for a very long time.</p></div>
+        </div>
+      </article>
+
+      <article class="year-section final-year reveal" id="year-18">
+        <div class="year-number">18</div>
+        <div class="memory">
+          <div class="photo-placeholder"><img src="images/year-18.jpg" alt="A photo from year eighteen" onerror="this.parentElement.classList.add('missing'); this.style.display='none';"></div>
+          <div class="memory-copy">
+            <p class="year-label">Eighteen · 2026</p>
+            <h2>13 years of getting to call you Mom.</h2>
+            <p>And somehow I still don't have enough words to tell you how thankful I am.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="thank-you reveal">
+      <div class="leaf-border">🍂 ✦ 🌿 ✦ 🍂</div>
+      <p class="eyebrow">One last thing</p>
+      <h2>Thank you.</h2>
+      <p>
+        Mom and Dad, thank you for loving me, raising me, teaching me, putting up with me,
+        praying for me, and being there through every version of me. I wouldn't be the person
+        I am today without you. Mom, thank you for coming into my life when I was six and
+        becoming my mom in all the ways that matter. Dad, thank you for being there through
+        every chapter too. I love you both more than I could ever fit into a website, and I
+        thank God for the family and the life He has given me.
+      </p>
+      <p class="love">I love you. Always. ❤️</p>
+      <button class="secret-button" id="secretButton">There's one more thing...</button>
+    </section>
+
+    <section class="secret reveal hidden-secret" id="secret">
+      <div class="secret-stars"></div>
+      <p class="eyebrow">For Mom</p>
+      <h2>No matter how old I get...</h2>
+      <p>
+        I'll always be your daughter.
+      </p>
+      <p>
+        Thank you for all the years behind me, all the memories in between,
+        and all the years still ahead.
+      </p>
+      <div class="final-mark">18 ✦</div>
+      <p class="small-final">The summer ended. The memories didn't.</p>
+    </section>
+
+    <footer>
+      <p>Made with love · September 22, 2026 · 5:05 PM</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+* { box-sizing: border-box; }
+
+:root {
+  --navy: #090d1c;
+  --purple: #252044;
+  --cream: #f5eedf;
+  --green: #233d31;
+  --earth: #d9c8a7;
+  --orange: #b94b27;
+  --red: #7e2927;
+  --yellow: #d8a83e;
+  --ink: #201c1a;
+  --white: #fffaf0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--cream);
+  background: var(--navy);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+button { font: inherit; }
+
+.hidden { display: none !important; }
+
+.lock-screen {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(101, 78, 165, .24), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(53, 91, 130, .20), transparent 30%),
+    linear-gradient(145deg, #070a16, #17112d 55%, #080b16);
+}
+
+.lock-screen::before,
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.85) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,.45) 1px, transparent 1.5px);
+  background-size: 95px 95px, 143px 143px;
+  background-position: 10px 20px, 50px 80px;
+  opacity: .35;
+  pointer-events: none;
+}
+
+.lock-content {
+  text-align: center;
+  max-width: 680px;
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+  animation: floatIn 1.4s ease both;
+}
+
+.small-mark { font-size: 28px; margin-bottom: 15px; opacity: .8; }
+
+h1, h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  line-height: .95;
+}
+
+.lock-content h1 {
+  font-size: clamp(4rem, 13vw, 8.5rem);
+  margin: 0;
+  letter-spacing: -.04em;
+}
+
+.lock-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.date {
+  margin-top: 35px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  opacity: .78;
+}
+
+.countdown {
+  margin: 14px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+}
+
+.lock-note { opacity: .7; font-size: .85rem; }
+
+.site { background: var(--navy); }
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(103, 70, 145, .36), transparent 36%),
+    linear-gradient(160deg, #080b18, #1c1636 60%, #090d1c);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 40px 22px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-size: .72rem;
+  opacity: .72;
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  font-size: clamp(5rem, 17vw, 12rem);
+  margin: 0;
+  letter-spacing: -.055em;
+}
+
+.hero-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.35;
+  margin: 30px auto;
+  max-width: 680px;
+}
+
+.start-button, .music-button, .secret-button {
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.08);
+  color: var(--cream);
+  border-radius: 999px;
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: .25s ease;
+  margin: 5px;
+}
+
+.start-button:hover, .music-button:hover, .secret-button:hover {
+  background: rgba(255,255,255,.16);
+  transform: translateY(-2px);
+}
+
+.music-note {
+  font-size: .65rem;
+  opacity: .4;
+  margin-top: 12px;
+}
+
+.intro, .thank-you {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 120px 25px;
+  text-align: center;
+}
+
+.intro h2, .thank-you h2 {
+  font-size: clamp(3rem, 7vw, 5.7rem);
+  margin: 0 0 28px;
+}
+
+.intro p, .thank-you p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  line-height: 1.55;
+  margin: 15px auto;
+  max-width: 720px;
+}
+
+.years { width: 100%; }
+
+.year-section {
+  min-height: 90vh;
+  min-height: 90svh;
+  padding: 100px 7vw;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+}
+
+.sky {
+  background:
+    radial-gradient(circle at 75% 25%, rgba(100, 78, 165, .28), transparent 25%),
+    radial-gradient(circle at 15% 80%, rgba(45, 89, 130, .2), transparent 25%),
+    linear-gradient(145deg, #0a0f22, #191435 60%, #0a0e1c);
+}
+
+.earth {
+  color: #f3ead8;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(174, 145, 92, .20), transparent 25%),
+    linear-gradient(145deg, #1e352b, #2c4937 55%, #172a22);
+}
+
+.fall {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(216,168,62,.20), transparent 22%),
+    linear-gradient(145deg, #602a23, #8c3826 45%, #4a2424);
+}
+
+.year-section::after {
+  content: "✦  ·  ✧  ·  ✦";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: .22;
+  letter-spacing: .7em;
+}
+
+.year-number {
+  position: absolute;
+  top: 30px;
+  left: 5vw;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(5rem, 14vw, 11rem);
+  line-height: .8;
+  opacity: .12;
+}
+
+.memory {
+  width: min(1100px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+  gap: clamp(35px, 7vw, 90px);
+  align-items: center;
+}
+
+.photo-placeholder {
+  aspect-ratio: 4 / 5;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 25px 70px rgba(0,0,0,.25);
+  position: relative;
+}
+
+.photo-placeholder::after {
+  content: "Add this year's photo";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: .45;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.photo-placeholder:not(.missing)::after { display: none; }
+
+.memory-copy { max-width: 560px; }
+
+.year-label {
+  text-transform: uppercase;
+  letter-spacing: .24em;
+  font-size: .72rem !important;
+  opacity: .65;
+  margin-bottom: 12px !important;
+}
+
+.memory-copy h2 {
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  margin: 0 0 22px;
+}
+
+.memory-copy > p:last-child {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.final-year {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255,194,91,.20), transparent 30%),
+    linear-gradient(145deg, #4e2721, #a04828 48%, #5b2925);
+}
+
+.thank-you {
+  background: linear-gradient(180deg, #5b2925, #242c22);
+  max-width: none;
+}
+
+.thank-you > * { position: relative; z-index: 2; }
+
+.leaf-border { letter-spacing: .8em; opacity: .7; margin-bottom: 30px; }
+
+.love {
+  font-size: 2rem !important;
+  margin-top: 35px !important;
+}
+
+.secret-button { margin-top: 35px; }
+
+.secret {
+  min-height: 80vh;
+  min-height: 80svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 80px 25px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(100,78,165,.35), transparent 35%),
+    linear-gradient(160deg, #070a16, #18132d);
+}
+
+.secret h2 { font-size: clamp(3.5rem, 8vw, 7rem); margin: 0 0 25px; }
+.secret p { font-family: "Cormorant Garamond", serif; font-size: 1.7rem; max-width: 650px; line-height: 1.5; }
+.final-mark { font-family: "Cormorant Garamond", serif; font-size: 5rem; opacity: .65; }
+.small-final { font-size: .8rem !important; opacity: .55; }
+
+footer {
+  padding: 35px 20px;
+  text-align: center;
+  background: #090b12;
+  opacity: .7;
+  font-size: .65rem;
+  letter-spacing: .08em;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .memory { grid-template-columns: 1fr; }
+  .photo-placeholder { max-width: 500px; width: 100%; margin: auto; }
+  .memory-copy { text-align: center; margin: auto; }
+  .year-section { padding: 100px 25px 80px; }
+  .year-number { left: 18px; }
+  .intro, .thank-you { padding: 90px 22px; }
+}
