@@ -1,4 +1,4 @@
-const UNLOCK_DATE = new Date("2026-09-01T17:05:00");
+const UNLOCK_DATE = new Date("2026-09-22T17:05:00");
 
 const lockScreen = document.getElementById("lockScreen");
 const site = document.getElementById("site");
