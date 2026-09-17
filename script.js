@@ -3,7 +3,7 @@ const lockScreen = document.getElementById("lockScreen");
 const site = document.getElementById("site");
 
 // September 22, 2026 at 5:05 PM
-const unlockDate = new Date(2026, 8, 22, 17, 5, 0);
+const unlockDate = new Date(2026, 8, 2, 17, 5, 0);
 
 function updateCountdown() {
   const now = new Date();
